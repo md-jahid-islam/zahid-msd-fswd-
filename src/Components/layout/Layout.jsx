@@ -6,7 +6,9 @@ const Layout = () => {
   return (
     <>
     <Navbar/>
+    <scrollToSection/>
     <Outlet/>
+
     
     </>
   )
