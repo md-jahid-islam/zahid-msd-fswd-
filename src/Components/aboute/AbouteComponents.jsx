@@ -10,7 +10,6 @@ const AboutComponent = () => {
         <div className="flex justify-center">
           <div className="relative group">
             <div className="absolute inset-0 rounded-3xl from-blue-500 to-cyan-500 opacity-30 blur-xl group-hover:opacity-60 transition duration-500"></div>
-           <img src="/images/Profile.jpg" alt="Jahidul Islam" className="relative rounded-3xl shadow-2xl w-72 md:w-96 object-cover transform group-hover:scale-105 transition-transform duration-500" />
             <video className=" rounded-2xl" src="/images/jahid.mp4"></video>
           </div>
         </div>
@@ -56,7 +55,7 @@ const AboutComponent = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <a href="#contact" className="bg-blue-600 text-center hover:bg-blue-700 px-6 py-3 rounded-xl font-semibold text-white transition-transform transform hover:scale-105 shadow-lg" >
+            <a href="#contact" className=" pt-9 px-6 py-3 rounded-xl font-semibold text-white transition-transform transform hover:scale-105 shadow-lg" >
               Contact Me
             </a>
              {/* Resume Download */}
