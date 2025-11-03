@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Navbar = () => {
-   // Scroll function
+ // ============= Scroll function ========== // 
+ const Navbar = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -88,4 +88,4 @@ const Navbar = () => {
   );
  };
  export default Navbar;
-  // hdfjkasdhfkjdnasklfjkasdjkf
+ // uhkjhkjl90l;opygu
