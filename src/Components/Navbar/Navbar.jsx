@@ -3,12 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 
  // ============= Scroll function ========== // 
  const Navbar = () => {
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // ============ Nav Links Data ============= // 
@@ -38,8 +32,8 @@ import { Link, NavLink } from 'react-router-dom';
           {/* Logo/Brand Name */}
           <div className="">
             <div className='flex gap-5'>
-            <Link to={""}><img className=' w-16 h-8 pt-1.5 rounded-b-xs' src="/images/zahid.jpg" alt="img" /></Link>
-            <Link className='text-2xl font-extrabold text-yellow-400' to={""}> Jahidul Islam</Link>
+            <Link to={""}><img className=' w-12 h-12 pt-1.5 rounded-full ' src="/images/zahid.jpg" alt="img" /></Link>
+            <Link className='text-2xl font-extrabold mt-1.5 text-yellow-400' to={""}> Jahidul Islam</Link>
             </div>
           </div>
 
@@ -88,4 +82,4 @@ import { Link, NavLink } from 'react-router-dom';
   );
  };
  export default Navbar;
- //  lksjkldfjklsjfkldaslk
+  // dafjbaklsdkmf;la;er23pe
