@@ -6,33 +6,12 @@ import { IoLogoLinkedin } from 'react-icons/io';
 
  // ========== Home Components start ========== //
  const HomeComponents = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  // ========== useEffect useState ============ //
-   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-      setDarkMode(true);
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
-
-   // ========== Theme Toggle ============ //
-   const toggleTheme = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    document.documentElement.classList.toggle('dark', newMode);
-    localStorage.setItem('theme', newMode ? 'dark' : 'light');
-  };
-
   return (
     <>
     <section className=''>
     <div className="container mx-auto px-4 py-4">
       {/* Toggle Theme Button */}
-      <button onClick={toggleTheme} className="absolute top-4 right-4 px-4 py-2 rounded-md bg-blue-500 text-white font-semibold shadow-lg hover:bg-blue-400 transition" aria-label="Toggle dark/light mode">
-      {darkMode ? 'Light Mode' : 'Dark Mode'}
+      <button className="absolute top-4 right-4 px-4 py-2 rounded-md bg-blue-500 text-white font-semibold shadow-lg hover:bg-blue-400 transition" aria-label="Toggle dark/light mode">
       </button>
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
@@ -56,11 +35,11 @@ import { IoLogoLinkedin } from 'react-icons/io';
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-4">
             <Link to="/about">
-            <button className="px-6 py-3 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition"> View Work
+            <button className=" bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-xl font-semibold text-white shadow-lg hover:scale-105 hover:shadow-pink-500/30 transition-transform duration-300"> View Work
             </button>
             </Link>
             <Link to="/contact">
-            <button className="px-6 py-3 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition"> Contact Me
+            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-xl font-semibold text-white shadow-lg hover:scale-105 hover:shadow-cyan-500/30 transition-transform duration-300"> Contact Me
             </button>
             </Link> 
             </div>
@@ -89,19 +68,19 @@ import { IoLogoLinkedin } from 'react-icons/io';
           {/* Social Links */}
           <div className="flex gap-4 mt-4 text-white text-xl">
             <Link className='' to="https://www.facebook.com/jahidul.islam.98621/" target='balnk' aria-label="Facebook">
-            <FaFacebook className="hover:text-[#b1c0d3] transition" />
+            <FaFacebook className="transition" />
             </Link>
             <Link to="https://github.com/md-jahid-islam" target='balnk' aria-label="GitHub">
-            <FaGithub className="hover:text-[#b1c0d3]  transition" />
+            <FaGithub className="transition" />
             </Link>
             <Link to="https://www.linkedin.com/in/jahidul-islam-a5021b325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target='blank' aria-label="LinkedIn">
-            <IoLogoLinkedin className="hover:text-[#0077B5] transition" />
+            <IoLogoLinkedin className="transition" />
             </Link>
           </div>
 
           {/* Resume Download */}
           <div className="mt-6">
-          <a href="/images/Zahidul Islam.pdf" download="Zahidul_Islam_Resume.pdf" className="w-[200px] h-[50px] bg-gradient-to-r text-white font-semibold rounded-lg shadow-md hover:scale-105 transition flex justify-center items-center hover:rotate-1 hover:shadow-lg"> Download Resume!</a>
+          <a href="/images/Zahidul Islam.pdf" download="Zahidul_Islam_Resume.pdf" className="  bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-xl font-semibold text-white shadow-lg hover:scale-105 hover:shadow-pink-500/30 transition-transform duration-300"> Download Resume!</a>
           </div>   
         </div>
       </div>
